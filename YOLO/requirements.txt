@@ -1,0 +1,12 @@
+ultralytics
+torch
+numpy==1.26.4
+opencv-python
+matplotlib
+Pillow
+scikit-learn
+ipywidgets>=7.0.0
+jupyterlab
+tqdm
+seaborn
+roboflow

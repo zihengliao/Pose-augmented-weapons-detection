@@ -24,11 +24,6 @@ This repo contains two standalone scripts:
 - Supports subset evaluation via `--cat-ids`
 - Supports custom grounding prompts via `--prompt-names`
 
-### Example launch scripts (optional)
-- `slurm_train.sbatch`
-- `slurm_infer.sbatch`
-
-These are optional helpers for cluster execution, but the scripts work on any machine.
 
 ---
 

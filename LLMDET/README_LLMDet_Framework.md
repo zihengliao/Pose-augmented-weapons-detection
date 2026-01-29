@@ -160,6 +160,7 @@ GroundingDINO checkpoints used by LLMDet, including:
 - `bert-base-uncased`
 - `siglip-so400m-patch14-384`
 - GroundingDINO pretrained `.pth` weights (Swin-T/B/L)
+- The one used in our experiment was "grounding_dino_swin-t_pretrain_obj365_goldg_grit9m_v3det_20231204_095047-b448804b.pth"
 
 Full download instructions (including optional LLaVA/Qwen vision-language models and
 grounding datasets) are provided in the official upstream repository:
@@ -313,16 +314,3 @@ Then run inference with:
 ```bash
 --cat-ids 5
 ```
-
----
-
-## Summary
-
-This repo provides a minimal reproducible framework for:
-
-- COCO GroundingDINO training with LLMDet
-- Optional caption supervision via COCO captions
-- COCO evaluation/inference with grounding prompts
-- Compatibility with local machines or cluster environments
-
----

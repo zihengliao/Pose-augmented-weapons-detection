@@ -100,6 +100,8 @@ from huggingface_hub import snapshot_download
 snapshot_download("bert-base-uncased", local_dir="huggingface/bert-base-uncased")
 ```
 
+
+
 ---
 
 ## Critical Note: Run From `configs/`
@@ -151,6 +153,31 @@ Bounding boxes must be in COCO format:
 ```
 [x_min, y_min, width, height]
 ```
+
+---
+
+## Pretrained Models and Baseline Checkpoints
+
+This repo is a lightweight training/inference wrapper built on top of the official
+**LLMDet / MM-GDINO** codebase.
+
+To reproduce results, you must download the same pretrained backbones and baseline
+GroundingDINO checkpoints used by LLMDet, including:
+
+- `bert-base-uncased`
+- `siglip-so400m-patch14-384`
+- GroundingDINO pretrained `.pth` weights (Swin-T/B/L)
+
+Full download instructions (including optional LLaVA/Qwen vision-language models and
+grounding datasets) are provided in the official upstream repository:
+
+https://github.com/iSEE-Laboratory/LLMDet
+
+In particular, LLMDet is fine-tuned from `mm_grounding_dino`, so the pretrained
+GroundingDINO checkpoints must be available and passed via:
+
+```bash
+--load-from /path/to/grounding_dino_pretrained.pth
 
 ---
 

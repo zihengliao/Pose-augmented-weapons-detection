@@ -84,20 +84,13 @@ The upstream LLMDet configs may reference local HuggingFace assets using relativ
 ../huggingface/bert-base-uncased/
 ```
 
-Therefore, you must ensure the following exist:
+Therefore, you must ensure the following exist (Look to pretrained model section):
 
 ```
 LLMDet-main/huggingface/
   bert-base-uncased/
   my_llava-onevision-qwen2-0.5b-ov-2/
   siglip-so400m-patch14-384/
-```
-
-If missing, download them using:
-
-```python
-from huggingface_hub import snapshot_download
-snapshot_download("bert-base-uncased", local_dir="huggingface/bert-base-uncased")
 ```
 
 
@@ -178,6 +171,7 @@ GroundingDINO checkpoints must be available and passed via:
 
 ```bash
 --load-from /path/to/grounding_dino_pretrained.pth
+```
 
 ---
 

@@ -1,0 +1,11 @@
+roboflow
+google-generativeai
+Pillow
+tqdm
+python-dotenv
+
+transformers
+torch
+torchvision
+timm
+accelerate

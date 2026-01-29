@@ -4,7 +4,7 @@ This repository provides a lightweight training + evaluation framework built on 
 
 There are two main steps to use this repo:
 
-1. **Customize your dataset** (COCO JSON + optional captions)
+1. **Customise your dataset** (COCO JSON + optional captions)
 2. **Run training or inference scripts** (locally or on any Slurm/HPC system)
 
 ---
@@ -50,7 +50,8 @@ Typical required packages:
 
 ## Setup: Download LLMDet
 
-You must have the upstream LLMDet repo available, because it provides:
+You must have the upstream [LLMDet](https://github.com/iSEE-Laboratory/LLMDet) repo available, because it provides:
+
 
 - `mmdet` modules
 - GroundingDINO model definitions

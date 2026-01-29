@@ -13,12 +13,12 @@ There are two main steps to use this repo:
 
 This repo contains two standalone scripts:
 
-### `train_llmdet_github.py`
+### `train_llmdet.py`
 - Main training driver for LLMDet GroundingDINO
 - Builds COCO dataloaders directly inside the script
 - Supports optional caption losses via `--enable-caption-losses`
 
-### `infer_llmdet_github.py`
+### `infer_llmdet.py`
 - Main evaluation / inference driver
 - Runs COCO bbox metrics from a trained checkpoint
 - Supports subset evaluation via `--cat-ids`

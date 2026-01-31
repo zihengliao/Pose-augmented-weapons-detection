@@ -16,17 +16,6 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_YAML = os.path.join(PROJECT_ROOT, 'src/data/Threat-Detection-1', 'data.yaml')
 
 # Initialize wandb
-# wandb.init(
-#     project="Pose-augmented weapon detection using machine learning",
-#     name="yolo11s with guns dataset (43K images)",
-#     config={
-#         "epochs": 100,
-#         "batch_size": 4,
-#         "image_size": 640,
-#         "model": "yolov11s",
-#         "dataset": "Guns Dataset (43K images)"
-#     }
-# )
 
 # Load a model
 model = YOLO("src/yolo11s.pt")  # Load the default YOLOv11s small model
@@ -50,12 +39,6 @@ train_results = model.train(
 
 # Log validation metrics to wandb
 metrics = model.val()
-# wandb.log({
-#     "val/mAP50": metrics.box.map50,
-#     "val/mAP50-95": metrics.box.map,
-#     "val/precision": metrics.box.mp,
-#     "val/recall": metrics.box.mr
-# })
 
 # Export the model and log it to wandb
 path = model.export(format="onnx")

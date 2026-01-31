@@ -2,10 +2,11 @@ from roboflow import Roboflow
 import wandb
 from rfdetr import RFDETRBase
 import torch
+import os
 
 # Initialize wandb
 
-wandb.login(key="")
+wandb.login()
 wandb.init(
     project="Pose-augmented weapon detection using machine learning",
     config={
@@ -18,18 +19,14 @@ wandb.init(
 )
 
 
-rf = Roboflow(api_key="")
+rf = Roboflow(api_key=os.getenv("ROBOFLOW_API_KEY"))
 project = rf.workspace("arms").project("the-monash-guns-dataset")
 version = project.version(2)
 dataset = version.download("coco")
                 
 
-
-
 torch.cuda.empty_cache()
 torch.cuda.reset_peak_memory_stats()
-
-import os
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 

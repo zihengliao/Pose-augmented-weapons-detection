@@ -28,9 +28,21 @@ Pick a model family and follow its README:
 
 ---
 
-## Common Data Conventions
+## Data
 
-- All training performed used the **COCO** dataset format. Feel free to change as needed
+All training performed used the **COCO** dataset format. Feel free to change as needed
+
+- **Firearms Dataset** (Hao et al., 2018)  
+  https://arxiv.org/abs/1806.02984
+
+- **Monash Guns Dataset** (Lim et al., 2019)  
+  https://github.com/MarcusLimJunYi/Monash-Guns-Dataset
+
+- **LinkSprite Dataset** (Qi et al., 2021)  
+  https://arxiv.org/abs/2105.01058
+
+- **Threat Detection Dataset** (Roboflow)  
+  https://universe.roboflow.com/threat-detection-k7wmf/threat-detection-m8dvh
 
 ---
 
